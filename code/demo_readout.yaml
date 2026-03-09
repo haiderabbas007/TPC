@@ -1,0 +1,25 @@
+# paths (relative to offline_step/)
+filename: "../Samples/sample_1.root"   # <-- pick one ROOT file to start
+treename: "HitNtuple"                  # change if your TTree has a different name
+output_h5: "../out/sample_1_noDiff.h5"
+
+# geometry/binning (keep your repo defaults unless you know better)
+pixel_size_xy: 5
+voxel_size_z: 0.1
+radius: 500
+length_z: 1000
+submap_size_xy: 100
+events_per_group: 4
+
+# turn OFF all smearing/diffusion/noise
+smear_sigma: 0.0
+
+# Optional keys some scripts accept (harmless if ignored)
+diffusion:
+  transverse_sigma: 0.0
+  longitudinal_sigma: 0.0
+smearing:
+  gain_sigma: 0.0
+  time_sigma: 0.0
+noise:
+  adc: 0.0
