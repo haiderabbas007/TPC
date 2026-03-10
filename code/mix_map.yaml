@@ -1,7 +1,7 @@
 # Globs or explicit paths are fine. Edit these to match your files in ./out
 positive:    # microcurlers
-  - offline_step/out/low_p_sample_*.h5      # <-- example pattern (change if wrong)
+  - ../offline_step/out/low_p_sample_*.h5      # <-- example pattern (change if wrong)
   # - out/microcurlers_*.h5    # (add/mix any others)
 
 negative:    # other = compton + delta merged
-  - offline_step/out/sample_*.h5            # <-- example pattern (change if wrong)
+  - ../offline_step/out/sample_*.h5            # <-- example pattern (change if wrong)

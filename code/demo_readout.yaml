@@ -1,7 +1,7 @@
 # paths (relative to offline_step/)
-filename: "../Samples/sample_1.root"   # <-- pick one ROOT file to start
+filename: "../data/others/sample_8.root"   # <-- pick one ROOT file to start
 treename: "HitNtuple"                  # change if your TTree has a different name
-output_h5: "../out/sample_1_noDiff.h5"
+output_h5: "../offline_step/out/sample_1_sparse.h5"
 
 # geometry/binning (keep your repo defaults unless you know better)
 pixel_size_xy: 5

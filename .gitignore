@@ -1,0 +1,20 @@
+# Ignore ROOT files
+*.root
+
+# Ignore data directory entirely (optional but recommended)
+data/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Vivado simulation/build artifacts
+*.sim/
+*.runs/
+*.cache/
+*.hw/
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
