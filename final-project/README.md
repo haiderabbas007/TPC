@@ -9,7 +9,7 @@ This repository contains the final project materials, including data-processing 
 
 ## Folder structure
 
-* 1\_data\_processing\_dataset\_preparation/
+* 1data-processing/
 * 2\_dataset\_files/
 * 3\_cnn\_training\_model\_preparation/
 * 4\_hls4ml\_vitis\_hls\_generated\_files/
