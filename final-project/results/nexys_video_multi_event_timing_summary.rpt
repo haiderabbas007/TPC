@@ -1,0 +1,420 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun May 10 12:15:20 2026
+| Host         : pclab7 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file nexys_video_multi_event_bitstream_output/nexys_video_multi_event_timing_summary.rpt
+| Design       : nexys_video_multi_event_top
+| Device       : 7a200t-sbg484
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (7)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (7)
+-------------------------------
+ There are 7 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.325        0.000                      0                21673        0.044        0.000                      0                21673        3.000        0.000                       0                  6887  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock          Waveform(ns)       Period(ns)      Frequency(MHz)
+-----          ------------       ----------      --------------
+CLK100MHZ      {0.000 5.000}      10.000          100.000         
+  clk80_unbuf  {0.000 6.250}      12.500          80.000          
+  clkfb        {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock              WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----              -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+CLK100MHZ                                                                                                                                                        3.000        0.000                       0                     1  
+  clk80_unbuf        0.325        0.000                      0                21673        0.044        0.000                      0                21673        5.000        0.000                       0                  6884  
+  clkfb                                                                                                                                                          8.751        0.000                       0                     2  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  CLK100MHZ
+  To Clock:  CLK100MHZ
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         CLK100MHZ
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { CLK100MHZ }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk80_unbuf
+  To Clock:  clk80_unbuf
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.325ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.044ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        5.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.325ns  (required time - arrival time)
+  Source:                 cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/mem_reg_1/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk80_unbuf  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk80_unbuf  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             clk80_unbuf
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (clk80_unbuf rise@12.500ns - clk80_unbuf rise@0.000ns)
+  Data Path Delay:        12.174ns  (logic 6.055ns (49.735%)  route 6.119ns (50.265%))
+  Logic Levels:           11  (CARRY4=5 LUT3=2 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        0.001ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    6.260ns = ( 18.760 - 12.500 ) 
+    Source Clock Delay      (SCD):    6.584ns
+    Clock Pessimism Removal (CPR):    0.325ns
+  Clock Uncertainty:      0.082ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.149ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk80_unbuf rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, routed)           1.233     2.708    CLK100MHZ_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     2.796 r  mmcm_80mhz_inst/CLKOUT0
+                         net (fo=1, routed)           1.808     4.605    clk80_unbuf
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     4.701 r  clk80_bufg_inst/O
+                         net (fo=6906, routed)        1.884     6.584    cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/clk80
+    RAMB36_X2Y17         RAMB36E1                                     r  cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/mem_reg_1/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X2Y17         RAMB36E1 (Prop_ramb36e1_CLKARDCLK_DOBDO[8])
+                                                      2.454     9.038 r  cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/mem_reg_1/DOBDO[8]
+                         net (fo=5, routed)           1.602    10.641    cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/dout[84]
+    SLICE_X35Y84         LUT4 (Prop_lut4_I0_O)        0.124    10.765 r  cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/select_ln66_55_reg_2373[11]_i_127/O
+                         net (fo=1, routed)           0.000    10.765    cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/select_ln66_55_reg_2373[11]_i_127_n_9
+    SLICE_X35Y84         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532    11.297 r  cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/select_ln66_55_reg_2373_reg[11]_i_81/CO[3]
+                         net (fo=1, routed)           0.000    11.297    cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/select_ln66_55_reg_2373_reg[11]_i_81_n_9
+    SLICE_X35Y85         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    11.454 r  cnn_block/core/core/cnn_inst/layer6_out_U/U_myproject_fifo_w128_d500_A_ram/select_ln66_55_reg_2373_reg[11]_i_32/CO[1]
+                         net (fo=24, routed)          0.856    12.310    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373[11]_i_34_0[0]
+    SLICE_X37Y83         LUT3 (Prop_lut3_I2_O)        0.323    12.633 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373[3]_i_5/O
+                         net (fo=2, routed)           0.450    13.082    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_53_fu_2167_p3[3]
+    SLICE_X37Y86         LUT6 (Prop_lut6_I5_O)        0.326    13.408 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373[11]_i_88/O
+                         net (fo=1, routed)           0.520    13.929    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373[11]_i_88_n_9
+    SLICE_X37Y84         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507    14.436 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[11]_i_33/CO[3]
+                         net (fo=1, routed)           0.000    14.436    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[11]_i_33_n_9
+    SLICE_X37Y85         CARRY4 (Prop_carry4_CI_CO[1])
+                                                      0.157    14.593 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[11]_i_10/CO[1]
+                         net (fo=12, routed)          1.018    15.610    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/icmp_ln1549_54_fu_2175_p2
+    SLICE_X34Y86         LUT5 (Prop_lut5_I4_O)        0.357    15.967 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373[9]_i_3/O
+                         net (fo=3, routed)           0.978    16.946    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/select_ln66_54_fu_2187_p3[9]
+    SLICE_X41Y86         LUT4 (Prop_lut4_I2_O)        0.332    17.278 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/select_ln66_55_reg_2373[11]_i_15/O
+                         net (fo=1, routed)           0.000    17.278    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/select_ln66_55_reg_2373[11]_i_15_n_9
+    SLICE_X41Y86         CARRY4 (Prop_carry4_S[0]_CO[1])
+                                                      0.457    17.735 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/select_ln66_55_reg_2373_reg[11]_i_4/CO[1]
+                         net (fo=12, routed)          0.695    18.430    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/icmp_ln1549_55_fu_2195_p2
+    SLICE_X40Y86         LUT3 (Prop_lut3_I2_O)        0.329    18.759 r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/line_buffer_Array_0_7_U/myproject_pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_s_line_buqcK_core_U/select_ln66_55_reg_2373[2]_i_1/O
+                         net (fo=1, routed)           0.000    18.759    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_fu_2207_p3[2]
+    SLICE_X40Y86         FDRE                                         r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk80_unbuf rise edge)
+                                                     12.500    12.500 r  
+    R4                                                0.000    12.500 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000    12.500    CLK100MHZ
+    R4                   IBUF (Prop_ibuf_I_O)         1.405    13.905 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, routed)           1.162    15.067    CLK100MHZ_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.083    15.150 r  mmcm_80mhz_inst/CLKOUT0
+                         net (fo=1, routed)           1.723    16.873    clk80_unbuf
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    16.964 r  clk80_bufg_inst/O
+                         net (fo=6906, routed)        1.796    18.760    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/clk80
+    SLICE_X40Y86         FDRE                                         r  cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[2]/C
+                         clock pessimism              0.325    19.085    
+                         clock uncertainty           -0.082    19.003    
+    SLICE_X40Y86         FDRE (Setup_fdre_C_D)        0.081    19.084    cnn_block/core/core/cnn_inst/pooling2d_cl_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config7_U0/select_ln66_55_reg_2373_reg[2]
+  -------------------------------------------------------------------
+                         required time                         19.084    
+                         arrival time                         -18.759    
+  -------------------------------------------------------------------
+                         slack                                  0.325    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.044ns  (arrival time - required time)
+  Source:                 cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/data_V_4_reg_258_reg[9]/C
+                            (rising edge-triggered cell FDRE clocked by clk80_unbuf  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/ap_phi_reg_pp0_iter1_p_read431_phi_reg_390_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by clk80_unbuf  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             clk80_unbuf
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk80_unbuf rise@0.000ns - clk80_unbuf rise@0.000ns)
+  Data Path Delay:        0.315ns  (logic 0.141ns (44.710%)  route 0.174ns (55.290%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.199ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.468ns
+    Source Clock Delay      (SCD):    1.982ns
+    Clock Pessimism Removal (CPR):    0.286ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk80_unbuf rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    R4                   IBUF (Prop_ibuf_I_O)         0.243     0.243 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, routed)           0.440     0.683    CLK100MHZ_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.050     0.733 r  mmcm_80mhz_inst/CLKOUT0
+                         net (fo=1, routed)           0.531     1.264    clk80_unbuf
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.290 r  clk80_bufg_inst/O
+                         net (fo=6906, routed)        0.692     1.982    cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/clk80
+    SLICE_X21Y99         FDRE                                         r  cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/data_V_4_reg_258_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X21Y99         FDRE (Prop_fdre_C_Q)         0.141     2.123 r  cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/data_V_4_reg_258_reg[9]/Q
+                         net (fo=1, routed)           0.174     2.298    cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/ap_phi_reg_pp0_iter1_p_read431_phi_reg_390_reg[11]_0[9]
+    SLICE_X21Y100        FDRE                                         r  cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/ap_phi_reg_pp0_iter1_p_read431_phi_reg_390_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk80_unbuf rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  CLK100MHZ (IN)
+                         net (fo=0)                   0.000     0.000    CLK100MHZ
+    R4                   IBUF (Prop_ibuf_I_O)         0.431     0.431 r  CLK100MHZ_IBUF_inst/O
+                         net (fo=1, routed)           0.480     0.911    CLK100MHZ_IBUF
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                      0.053     0.964 r  mmcm_80mhz_inst/CLKOUT0
+                         net (fo=1, routed)           0.579     1.543    clk80_unbuf
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.572 r  clk80_bufg_inst/O
+                         net (fo=6906, routed)        0.897     2.468    cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/clk80
+    SLICE_X21Y100        FDRE                                         r  cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/ap_phi_reg_pp0_iter1_p_read431_phi_reg_390_reg[9]/C
+                         clock pessimism             -0.286     2.182    
+    SLICE_X21Y100        FDRE (Hold_fdre_C_D)         0.072     2.254    cnn_block/core/core/cnn_inst/dense_array_ap_fixed_8u_array_ap_fixed_12_5_5_3_0_8u_config9_U0/grp_dense_wrapper_ap_fixed_12_5_5_3_0_ap_fixed_12_5_5_3_0_config9_s_fu_69/ap_phi_reg_pp0_iter1_p_read431_phi_reg_390_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -2.254    
+                         arrival time                           2.298    
+  -------------------------------------------------------------------
+                         slack                                  0.044    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk80_unbuf
+Waveform(ns):       { 0.000 6.250 }
+Period(ns):         12.500
+Sources:            { mmcm_80mhz_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     DSP48E1/CLK         n/a            3.884         12.500      8.616      DSP48_X2Y28      cnn_block/core/core/cnn_inst/conv_2d_cl_array_ap_fixed_4u_array_ap_fixed_12_5_5_3_0_8u_config5_U0/grp_compute_output_buffer_2d_array_array_ap_fixed_12_5_5_3_0_8u_config5_s_fu_252/grp_dense_resource_rf_leq_nin_ap_fixed_ap_fixed_12_5_5_3_0_config5_mult_s_fu_479/mul_mul_12s_10s_19_1_1_U152/myproject_mul_mul_12s_10s_19_1_1_DSP48_0_U/p/CLK
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       12.500      200.860    MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKOUT0
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         6.250       5.000      SLICE_X2Y45      cnn_block/input_fifo/mem_reg_0_63_0_2/RAMA/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         6.250       5.000      SLICE_X2Y45      cnn_block/input_fifo/mem_reg_0_63_0_2/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfb
+  To Clock:  clkfb
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        8.751ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfb
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { mmcm_80mhz_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKFBOUT
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  mmcm_80mhz_inst/CLKFBIN
+
+
+

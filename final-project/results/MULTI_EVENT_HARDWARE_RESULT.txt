@@ -1,0 +1,39 @@
+Multi-Event Hardware Validation Result
+
+Board:
+- Digilent Nexys Video
+- FPGA: Xilinx Artix-7 XC7A200T
+- Vivado part: xc7a200tsbg484-1
+
+Design:
+- Top module: nexys_video_multi_event_top
+- Clock: 100 MHz board clock converted to 80 MHz CNN clock using MMCM
+- Input data source: multi_event_rom_4.v
+- Processing block: FIFO + hls4ml CNN trigger RTL
+- Output display: LEDs
+
+Stored event slots:
+- Slot 0: rtl_events/event_input_001.txt, expected trigger 1
+- Slot 1: rtl_events/event_input_011.txt, expected trigger 0
+- Slot 2: rtl_events/event_input_012.txt, expected trigger 1
+- Slot 3: rtl_events/event_input_013.txt, expected trigger 0
+
+LED mapping:
+- LED0 = MMCM locked
+- LED1 = reset released
+- LED2 = event slot bit 0
+- LED3 = event slot bit 1
+- LED4 = result captured
+- LED5 = hardware CNN trigger bit
+- LED6 = expected trigger bit
+- LED7 = match indicator, hardware trigger == expected trigger
+
+Hardware validation:
+- Press 1: slot 0, hardware trigger 1, expected trigger 1, LED7 ON
+- Press 2: slot 1, hardware trigger 0, expected trigger 0, LED7 ON
+- Press 3: slot 2, hardware trigger 1, expected trigger 1, LED7 ON
+- Press 4: slot 3, hardware trigger 0, expected trigger 0, LED7 ON
+- Press 5: slot 0 again, hardware trigger 1, expected trigger 1, LED7 ON
+
+Conclusion:
+The Nexys Video FPGA successfully processed multiple real exported events through the FIFO + hls4ml CNN trigger block. The hardware trigger output matched the expected simulation trigger for all tested event slots. The debounced button interface allowed clean one-event-per-press operation.
