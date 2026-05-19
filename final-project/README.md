@@ -9,14 +9,14 @@ This repository contains the final project materials, including data-processing 
 
 ## Folder structure
 
-* 1data-processing/
-* 2\_dataset\_files/
-* 3\_cnn\_training\_model\_preparation/
-* 4\_hls4ml\_vitis\_hls\_generated\_files/
-* 5\_nexys\_video\_fpga\_board\_integration/
-* 6\_ethernet\_extension\_files/
-* 7\_zynq\_pynq\_validation\_files/
-* 8\_results\_evidence\_files/
+* data-processing/
+* dataset-files/
+* cnn-training/
+* hls4ml-vitis/
+* fpga-integrate/
+* ethernet/
+* zynq-files/
+* results
 
 ## Main result
 
