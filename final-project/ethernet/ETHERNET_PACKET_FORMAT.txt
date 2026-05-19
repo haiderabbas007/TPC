@@ -1,0 +1,73 @@
+Ethernet / UDP Packet Format for CNN Trigger Project
+
+Current validated event format:
+- One event = 2000 samples
+- One sample = 16-bit unsigned integer
+- Total event payload = 2000 x 2 bytes = 4000 bytes
+
+Because a normal Ethernet frame cannot comfortably carry the full 4000-byte event in one UDP packet, each event will be split into 4 UDP packets.
+
+Packet split:
+- 500 samples per packet
+- 1000 bytes sample payload per packet
+- 4 packets per event
+
+UDP payload format, little-endian:
+
+uint16 magic
+uint16 event_id
+uint16 packet_index
+uint16 total_packets
+uint16 sample_offset
+uint16 sample_count
+uint16 samples[sample_count]
+
+Header size:
+- 12 bytes
+
+Packet payload size:
+- 12 byte header + 1000 byte sample payload = 1012 bytes
+
+Magic number for event packet:
+- 0xCAFE
+
+Example event:
+- event_id = 1
+- total_packets = 4
+
+Packet 0:
+- packet_index = 0
+- sample_offset = 0
+- sample_count = 500
+
+Packet 1:
+- packet_index = 1
+- sample_offset = 500
+- sample_count = 500
+
+Packet 2:
+- packet_index = 2
+- sample_offset = 1000
+- sample_count = 500
+
+Packet 3:
+- packet_index = 3
+- sample_offset = 1500
+- sample_count = 500
+
+Future FPGA receive logic:
+PC UDP sender
+-> Ethernet PHY/MAC
+-> UDP receiver
+-> event buffer
+-> AXI-stream converter
+-> cnn_trigger_fifo_top
+-> result capture
+-> UDP reply or LED output
+
+Result packet format, future:
+uint16 magic = 0xBEEF
+uint16 event_id
+uint16 trigger
+uint16 status
+uint32 result_word
