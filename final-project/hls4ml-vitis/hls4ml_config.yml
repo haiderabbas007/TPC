@@ -1,0 +1,110 @@
+Backend: Vivado
+ClockPeriod: 5
+ClockUncertainty: 12.5%
+HLSConfig:
+  LayerName:
+    conv1:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    conv2:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    dense1:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    global_avg_pool:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    input_layer:
+      Precision:
+        result: ap_fixed<10,4>
+      ReuseFactor: 32
+      Trace: false
+    output:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 8
+      Trace: false
+    pool1:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    pool2:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    relu1:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    relu2:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+    relu_dense1:
+      Precision:
+        bias: ap_fixed<10,3>
+        result: ap_fixed<12,5>
+        weight: ap_fixed<10,3>
+      ReuseFactor: 32
+      Trace: false
+  Model:
+    BitExact: null
+    BramFactor: 1000000000
+    Precision:
+      default: ap_fixed<12,5>
+    ReuseFactor: 32
+    Strategy: Resource
+    TraceOutput: false
+IOType: io_stream
+InputData: null
+InputShapes:
+  input_layer:
+  - 20
+  - 100
+  - 1
+KerasModel: !keras_model 'hls4ml_medium_stream_cnn_80_180/keras_model.keras'
+OutputDir: hls4ml_medium_stream_cnn_80_180
+OutputPredictions: null
+OutputShapes:
+  layer11_out:
+  - 1
+Part: xcu250-figd2104-2L-e
+ProjectName: myproject
+Stamp: 5391d7f5
+Version: 1.0.0
+WriterConfig:
+  Namespace: null
+  TBOutputStream: both
+  WriteTar: false
+  WriteWeightsTxt: true
