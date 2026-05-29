@@ -18,3 +18,24 @@ __pycache__/
 # OS junk
 .DS_Store
 Thumbs.db
+# Generated ML / FPGA outputs
+*.h5
+*.keras
+*.zip
+*.mem
+*.csv
+*.root
+
+code/event_mems/
+code/event_mems_combined/
+code/event_mems_medium/
+code/example_images/
+code/hls4ml_*/
+code/models_*/
+code/plots_*/
+code/weights_*/
+code/out_sub_80_180/
+code/rtl_events/
+
+__pycache__/
+*.pyc
