@@ -1,0 +1,7 @@
+Model: medium CNN corrected
+Validation-chosen threshold: 0.34
+Test accuracy: 0.8733
+Test precision: 0.8472
+Test recall: 0.8841
+Test F1: 0.8652
+Test AUC: 0.9533

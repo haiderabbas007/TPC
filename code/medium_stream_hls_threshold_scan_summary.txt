@@ -1,0 +1,43 @@
+Medium Stream hls4ml Threshold Scan Summary
+==========================================
+
+N_EVENTS = 300
+y balance = [162 138]
+hls min = -2.453125
+hls max = 4.015625
+hls mean = -0.4073176980018616
+hls std = 1.0513464212417603
+unique raw scores = 85
+best = {'raw_thr': -115, 'thr': -0.8984375, 'acc': 0.7466666666666667, 'prec': 0.7924528301886793, 'rec': 0.6086956521739131, 'f1': 0.6885245901639344, 'n_trigger': 106}
+
+First 30 scores:
+  0 label=1 keras=-0.028326 hls=-0.570312 raw=  -73
+  1 label=1 keras= 6.054314 hls= 4.015625 raw=  514
+  2 label=0 keras=-0.861907 hls=-0.921875 raw= -118
+  3 label=0 keras=-0.924308 hls=-0.921875 raw= -118
+  4 label=0 keras=-0.926196 hls=-0.921875 raw= -118
+  5 label=1 keras= 2.355291 hls= 1.007812 raw=  129
+  6 label=0 keras=-0.816902 hls=-0.921875 raw= -118
+  7 label=0 keras=-0.262623 hls=-0.921875 raw= -118
+  8 label=1 keras= 1.822433 hls= 0.382812 raw=   49
+  9 label=0 keras=-0.925023 hls=-0.921875 raw= -118
+ 10 label=1 keras= 2.358500 hls= 1.398438 raw=  179
+ 11 label=0 keras=-0.335604 hls=-0.921875 raw= -118
+ 12 label=1 keras= 2.347913 hls= 1.101562 raw=  141
+ 13 label=0 keras=-0.925023 hls=-0.921875 raw= -118
+ 14 label=0 keras= 0.458949 hls=-0.507812 raw=  -65
+ 15 label=0 keras=-0.918335 hls=-0.921875 raw= -118
+ 16 label=1 keras= 1.539580 hls= 0.093750 raw=   12
+ 17 label=0 keras=-0.605473 hls=-0.921875 raw= -118
+ 18 label=0 keras=-0.373711 hls=-0.921875 raw= -118
+ 19 label=1 keras=-0.673911 hls=-0.921875 raw= -118
+ 20 label=1 keras= 4.412515 hls= 3.398438 raw=  435
+ 21 label=1 keras=-0.329552 hls=-0.921875 raw= -118
+ 22 label=1 keras= 0.655813 hls=-0.890625 raw= -114
+ 23 label=0 keras=-0.269750 hls=-0.921875 raw= -118
+ 24 label=1 keras= 3.370605 hls= 1.648438 raw=  211
+ 25 label=1 keras= 6.325941 hls= 2.523438 raw=  323
+ 26 label=0 keras=-0.898848 hls=-0.921875 raw= -118
+ 27 label=0 keras=-0.911357 hls=-0.921875 raw= -118
+ 28 label=0 keras=-0.846812 hls=-0.921875 raw= -118
+ 29 label=1 keras= 6.098155 hls= 3.632812 raw=  465

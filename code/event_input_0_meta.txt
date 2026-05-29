@@ -1,0 +1,15 @@
+h5=out_sub_80_180/test.h5
+x_dataset=X
+index=0
+label=1
+input_t=nnet::array<ap_fixed<10,4>, 1*1>
+W=10
+I=4
+fractional_bits=6
+fixed_scale=64
+normalization_scale=0.9490740895271301
+normalized=True
+raw_unsigned_min=0
+raw_unsigned_max=8
+raw_signed_min=0
+raw_signed_max=8
